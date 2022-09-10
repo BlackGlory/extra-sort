@@ -1,2 +1,2 @@
-export * from './sort-numbers'
-export * from './sort-strings'
+export * from './number'
+export * from './string'

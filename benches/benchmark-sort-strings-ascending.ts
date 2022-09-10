@@ -3,8 +3,16 @@ import { go } from '@blackglory/prelude'
 import { sortStringsAscending } from '..'
 
 const benchmark = new Benchmark('sort strings ascending', {
-  warmUps: 10000
-, runs: 10000
+  warmUps: 100000
+, runs: 100000
+})
+
+benchmark.addCase('sortStringsAscending', () => {
+  return () => {
+    const arr: string[] = ['10', '2', '3', '2']
+
+    sortStringsAscending(arr)
+  }
 })
 
 benchmark.addCase('.sort()', () => {
@@ -30,14 +38,6 @@ benchmark.addCase('.sort(compare)', () => {
     } else {
       return 0
     }
-  }
-})
-
-benchmark.addCase('sortStringsAscending', () => {
-  return () => {
-    const arr: string[] = ['10', '2', '3', '2']
-
-    sortStringsAscending(arr)
   }
 })
 

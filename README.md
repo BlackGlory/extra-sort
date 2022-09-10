@@ -26,3 +26,23 @@ function sortStringsAscending(arr: string[]): void
 ```ts
 function sortStringsDescending(arr: string[]): void
 ```
+
+### compareNumbersAscending
+```ts
+function compareNumbersAscending(a: number, b: number): number
+```
+
+### compareNumbersDescending
+```ts
+function compareNumbersDescending(a: number, b: number): number
+```
+
+#### compareStringsAscending
+```ts
+function compareStringsAscending(a: string, b: string): number
+```
+
+#### compareStringsDescending
+```ts
+function compareStringsDescending(a: string, b: string): number
+```
