@@ -30,6 +30,7 @@
     "build:es2018:compile": "tsc --project tsconfig.build.json --module commonjs --target es2018 --outDir lib/es2018",
     "build:es2018:patch": "tscpaths -p tsconfig.build.json -s ./src -o ./lib/es2018",
     "bundle": "rollup --config rollup.config.js",
+    "bench": "./benches/benchmark.sh",
     "release": "standard-version"
   },
   "husky": {
@@ -51,6 +52,7 @@
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^8.8.0",
+    "extra-benchmark": "^0.1.0",
     "husky": "4",
     "jest": "^27.4.7",
     "npm-run-all": "^4.1.5",
