@@ -37,12 +37,12 @@ function compareNumbersAscending(a: number, b: number): number
 function compareNumbersDescending(a: number, b: number): number
 ```
 
-#### compareStringsAscending
+### compareStringsAscending
 ```ts
 function compareStringsAscending(a: string, b: string): number
 ```
 
-#### compareStringsDescending
+### compareStringsDescending
 ```ts
 function compareStringsDescending(a: string, b: string): number
 ```
