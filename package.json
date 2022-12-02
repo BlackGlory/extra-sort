@@ -30,7 +30,11 @@
     "build:es2018:compile": "tsc --project tsconfig.build.json --module commonjs --target es2018 --outDir lib/es2018",
     "build:es2018:patch": "tscpaths -p tsconfig.build.json -s ./src -o ./lib/es2018",
     "bundle": "rollup --config rollup.config.js",
-    "bench": "./benches/benchmark.sh",
+    "bench": "run-s bench:*",
+    "bench:sort-numbers-ascending": "ts-node --require tsconfig-paths/register benches/sort-numbers-ascending.ts",
+    "bench:sort-numbers-descending": "ts-node --require tsconfig-paths/register benches/sort-numbers-descending.ts",
+    "bench:sort-strings-ascending": "ts-node --require tsconfig-paths/register benches/sort-strings-ascending.ts",
+    "bench:sort-strings-descending": "ts-node --require tsconfig-paths/register benches/sort-strings-descending.ts",
     "release": "standard-version"
   },
   "husky": {
@@ -48,6 +52,7 @@
     "@rollup/plugin-replace": "^3.0.1",
     "@rollup/plugin-typescript": "^8.3.0",
     "@types/jest": "^27.4.0",
+    "@types/node": "16",
     "@types/semver": "^7.3.9",
     "@typescript-eslint/eslint-plugin": "^5.10.2",
     "@typescript-eslint/parser": "^5.10.2",
@@ -63,6 +68,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "standard-version": "^9.3.2",
     "ts-jest": "^27.1.3",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.1.1",
     "tscpaths": "^0.0.9",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"

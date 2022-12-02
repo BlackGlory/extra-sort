@@ -1,25 +1,25 @@
 import { Benchmark } from 'extra-benchmark'
 import { go } from '@blackglory/prelude'
-import { sortStringsAscending } from '..'
+import { sortStringsDescending } from '..'
 
-const benchmark = new Benchmark('sort strings ascending', {
-  warmUps: 100000
-, runs: 100000
+const benchmark = new Benchmark('sort strings descending', {
+  warmUps: 1000
+, runs: 1000
 })
 
-benchmark.addCase('sortStringsAscending', () => {
+benchmark.addCase('sortStringsDescending', () => {
   return () => {
     const arr: string[] = ['10', '2', '3', '2']
 
-    sortStringsAscending(arr)
+    sortStringsDescending(arr)
   }
 })
 
-benchmark.addCase('.sort()', () => {
+benchmark.addCase('.sort().reverse()', () => {
   return () => {
     const arr: string[] = ['10', '2', '3', '2']
 
-    arr.sort()
+    arr.sort().reverse()
   }
 })
 
@@ -32,9 +32,9 @@ benchmark.addCase('.sort(compare)', () => {
 
   function compare(a: string, b: string): number {
     if (a > b) {
-      return 1
-    } else if (a < b) {
       return -1
+    } else if (a < b) {
+      return 1
     } else {
       return 0
     }

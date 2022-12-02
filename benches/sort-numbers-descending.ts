@@ -3,8 +3,8 @@ import { go } from '@blackglory/prelude'
 import { sortNumbersDescending } from '..'
 
 const benchmark = new Benchmark('sort numbers descending', {
-  warmUps: 100000
-, runs: 100000
+  warmUps: 1000
+, runs: 1000
 })
 
 benchmark.addCase('sortNumbersDescending', () => {
