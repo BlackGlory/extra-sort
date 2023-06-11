@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/BlackGlory/extra-sort/compare/v0.1.1...v0.1.2) (2023-06-11)
+
+
+### Bug Fixes
+
+* export src ([84ca42d](https://github.com/BlackGlory/extra-sort/commit/84ca42df543103f578e770f2483cdc7d9d7e5d2f))
+
 ### [0.1.1](https://github.com/BlackGlory/extra-sort/compare/v0.1.0...v0.1.1) (2022-09-10)
 
 
