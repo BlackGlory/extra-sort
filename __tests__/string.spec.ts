@@ -1,9 +1,10 @@
+import { describe, test, expect } from 'vitest'
 import {
   sortStringsAscending
 , sortStringsDescending
 , compareStringsAscending
 , compareStringsDescending
-} from '@src/string'
+} from '@src/string.js'
 
 test('sortStringsAscending', () => {
   const arr: string[] = ['10', '2', '3', '2']

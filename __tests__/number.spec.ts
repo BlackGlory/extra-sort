@@ -1,9 +1,10 @@
+import { describe, test, expect } from 'vitest'
 import {
   sortNumbersAscending
 , sortNumbersDescending
 , compareNumbersAscending
 , compareNumbersDescending
-} from '@src/number'
+} from '@src/number.js'
 
 test('sortNumbersAscending', () => {
   const arr: number[] = [3, 2, 10, 2]

@@ -1,2 +1,2 @@
-export * from './number'
-export * from './string'
+export * from './number.js'
+export * from './string.js'
